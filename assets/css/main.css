@@ -651,17 +651,20 @@ input, select, textarea {
 			border-radius: 4px;
 			content: '';
 			display: block;
-			height: 100%;
 			left: 0;
 			opacity: 0.5;
 			position: absolute;
 			top: 0;
 			width: 100%;
+			object-fit: cover;
 		}
 
 		.image img {
 			border-radius: 4px;
 			display: block;
+			height: 20dvh;
+			object-fit: cover;
+			object-position: top;
 		}
 
 		.image.left, .image.right {
@@ -1291,8 +1294,8 @@ input, select, textarea {
 			}
 
 		#header .logo {
-			width: 14rem;
-			height: 14rem;
+			width: 12rem;
+			height: 12rem;
 			line-height: 5.5rem;
 			border: solid 1px #ffffff;
 			border-radius: 20%;
@@ -1346,12 +1349,14 @@ input, select, textarea {
 			padding-left: 0;
 			border: solid 1px #ffffff;
 			border-radius: 4px;
+			font-size: 80%;
 		}
 
 			#header nav ul li {
+				display: flex;
 				padding-left: 0;
 				border-left: solid 1px #ffffff;
-				flex: 1;
+				flex: 1 1 0;
 			}
 
 				#header nav ul li:first-child {
@@ -1359,14 +1364,15 @@ input, select, textarea {
 				}
 
 				#header nav ul li a {
-					display: block;
+					flex: 1 1 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
 					min-width: 7.5rem;
 					height: 2.75rem;
-					line-height: 2.75rem;
-					padding: 0 1.25rem 0 1.45rem;
+					padding: 0 1.25rem 0 1.25rem;
 					text-transform: uppercase;
 					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
 					border-bottom: 0;
 				}
 
@@ -1551,6 +1557,9 @@ input, select, textarea {
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
+			max-height: 85dvh;
+			overflow-y: auto;
+			scrollbar-color: rgb(59, 66, 88) rgba(27, 31, 34, 0.85);;
 		}
 
 			#main article.active {
